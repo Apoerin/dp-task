@@ -1,0 +1,235 @@
+$logo-color: rgb(144, 111, 170);
+$nav-links-color: rgb(82, 90, 124);
+$category-all-color: rgb(220, 220, 220);
+$category-family-color: rgb(0, 158, 95);
+$category-cities-color: rgb(53, 162, 231);
+$category-active-color:rgb(209, 131, 29);
+$category-unesco-color: rgb(123, 182, 186);
+$map-background-color: rgb(241, 241, 241);
+$font-family: 'Roboto', sans-serif;
+
+body {
+    font-family: $font-family;
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+.nav-logo {
+    color: $logo-color;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 5rem;
+    list-style: none;
+}
+
+.nav-link {
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+    
+    &:hover {
+        color: $nav-links-color;
+    }
+}
+
+.nav-logo {
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: $logo-color;
+}
+
+h3 {
+    text-align: center;
+}
+
+.tours-list {
+    display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.tours-list .btn {
+	text-transform: uppercase;
+    margin: 10px;
+    padding: 10px;
+	transition: background-color 0.2s ease-in;
+    cursor: pointer;
+}
+
+.category-all {
+	background-color: transparent;
+    border: 2px solid $category-all-color;
+
+    &:hover, &.active {
+        background-color: $category-all-color;
+    }
+}
+
+.category-family {
+	background-color: transparent;
+    border: 2px solid $category-family-color;
+
+    &:hover, &.active {
+        background-color: $category-family-color;
+    }
+}
+
+.category-cities {
+	background-color: transparent;
+    border: 2px solid $category-cities-color;
+
+    &:hover, &.active {
+        background-color: $category-cities-color;
+    }
+}
+
+.category-active {
+	background-color: transparent;
+    border: 2px solid $category-active-color;
+
+    &:hover, &.active {
+        background-color: $category-active-color;
+    }
+}
+
+.category-unesco {
+	background-color: transparent;
+    border: 2px solid $category-unesco-color;
+
+    &:hover, &.active {
+        background-color: $category-unesco-color;
+    }
+}
+
+.wrapper {
+    position: relative;
+    margin: auto;
+	width: 90%;
+	height: 450px;
+	background-color: $map-background-color;
+}
+
+.wrapper .hidden {
+    display: none;
+}
+
+.spot {
+    position: absolute;
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+}
+
+.wrapper .family-spot {
+    background-color: $category-family-color;
+}
+
+.wrapper .cities-spot {
+    background-color: $category-cities-color;
+}
+
+.wrapper .active-spot {
+    background-color: $category-active-color;
+}
+
+.wrapper .unesco-spot {
+    background-color: $category-unesco-color;
+}
+
+// Slider
+
+.tns-nav, .tns-controls {
+    display: none;
+}
+
+.slide {
+    text-align: center;
+}
+
+@media only screen and (max-width: 1024px) {
+    .wrapper {
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: 100%;
+        top: 4rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        z-index: 4;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+
+        &.active {
+            left: 0;
+        }
+    }
+
+    .nav-item {
+        margin: 2rem 0;
+    }
+
+    .hamburger {
+        border: none;
+        background-color: transparent;
+        display: block;
+        cursor: pointer;
+        
+        &.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        &.active .bar:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        &.active .bar:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+    }
+
+    .wrapper {
+        width: 95%;
+    }
+}

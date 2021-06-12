@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>DirektPoint</title>
+    <link rel="stylesheet" type="text/css" href="./css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+<!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/min/tiny-slider.helper.ie8.js"></script><![endif]-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+            <nav class="navbar">
+                <a href="#" class="nav-logo">DirektPoint</a>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Zaplanuj wycieczkę</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Atrakcje regionu</a>
+                    </li>
+                </ul>
+                <button type="button" class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </nav>
+    </header>
+    <main>
+        <section class="plan-tour">
+            <h3>Zaplanuj wycieczkę</h3>
+            <div class="tours-list" id="tours-list">
+                    <button type="button" class="btn category-all active" data-filter="all" onclick="filterSelection(event)">
+                        wszystkie
+                    </button>
+                    <button type="button" class="btn category-family" data-filter="family-spot" onclick="filterSelection(event)">
+                    z rodziną
+                    </button>
+                    <button type="button" class="btn category-cities" data-filter="cities-spot" onclick="filterSelection(event)">
+                    miasta
+                    </button>
+                    <button type="button" class="btn category-active" data-filter="active-spot" onclick="filterSelection(event)">
+                        aktywne
+                    </button>
+                    <button type="button" class="btn category-unesco" data-filter="unesco-spot" onclick="filterSelection(event)">
+                        unesco
+                    </button>
+                </div>
+            <div id="wrapper" class="wrapper">
+                <div class="spot family-spot"></div>
+                <div class="spot family-spot"></div>
+
+                <div class="spot cities-spot"></div>
+                <div class="spot cities-spot"></div>
+
+                <div class="spot active-spot"></div>
+                <div class="spot active-spot"></div>
+
+                <div class="spot unesco-spot"></div>
+                <div class="spot unesco-spot"></div>
+            </div>
+        </section>
+        <section class="slider">
+            <h3>Atrakcje regionu</h3>
+            <div class="my-slider">
+                <div class="family-spot">
+                    <div class="slide">
+                        <img src="img/02.jpg" alt="Woman with laptop">
+                        <h4 class="title">Lorem Ipsum</h4>
+                    </div>
+                    <div class="slide">
+                        <img src="img/01.jpg" alt="Lake and mountains">
+                        <h4 class="title">Lorem Ipsum</h4>
+                    </div>
+                </div>
+                <div class="cities-spot">   
+                    <div class="slide">
+                        <img src="img/01.jpg" alt="Lake and mountains">
+                        <h4 class="title">Lorem Ipsum</h4>
+                    </div>
+                    <div class="slide">
+                        <img src="img/02.jpg" alt="Woman with laptop">
+                        <h4 class="title">Lorem Ipsum</h4>
+                    </div>
+                </div>
+                <div class="active-spot">
+                    <div class="slide">
+                        <img src="img/02.jpg" alt="Woman with laptop">
+                        <h4 class="title">Lorem Ipsum</h4>
+                    </div>
+                    <div class="slide">
+                        <img src="img/01.jpg" alt="Lake and mountains">
+                        <h4 class="title">Lorem Ipsum</h4>
+                    </div>
+                </div>
+                <div class="unesco-spot">
+                    <div class="slide">
+                        <img src="img/01.jpg" alt="Lake and mountains">
+                        <h4 class="title">Lorem Ipsum</h4>
+                    </div>
+                    <div class="slide">
+                        <img src="img/02.jpg" alt="Woman with laptop">
+                        <h4 class="title">Lorem Ipsum</h4>
+                    </div>
+                </div>
+              </div>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="script.js" type="text/javascript"></script>
+</body>
+
+</html>
